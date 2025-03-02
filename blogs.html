@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dev Board</title>
+
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- DaisyUI, Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --font-poppins: Poppins, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="h-full min-h-screen bg-gray-100 font-poppins">
+    <header class="container mx-auto">
+      <nav>
+        <div class="bg-white p-4 shadow-sm navbar">
+          <div class="flex flex-1 items-center gap-2.5">
+            <img src="assets/logo.png" alt="DevBoard Logo" class="w-10" />
+            <a class="text-2xl">Dev<span class="font-bold">Board</span></a>
+          </div>
+          <div class="flex flex-none items-center gap-8">
+            <div class="flex items-center gap-2.5">
+              <button class="btn btn-primary" id="btn-back-desk">Back to Desk</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto">
+      <div class="flex flex-col gap-5 py-6">
+        <div class="bg-white p-4 rounded-lg">
+          <h3
+            class="text-xl font-bold px-1 py-2 border-b border-dashed border-gray-400"
+          >
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h3>
+          <ol class="list-decimal list-inside px-1 py-2">
+            <li>Selecting by ID: document.getElementById(id)</li>
+            <li>
+              Selecting by Class Name:
+              document.getElementsByClassName(className)
+            </li>
+            <li>
+              Selecting by Tag Name: document.getElementsByTagName(tagName)
+            </li>
+            <li>
+              Selecting with CSS Selectors (First):
+              document.querySelector(selector)
+            </li>
+            <li>
+              Selecting with CSS Selectors (All):
+              document.querySelectorAll(selector)
+            </li>
+          </ol>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg">
+          <h3
+            class="text-xl font-bold px-1 py-2 border-b border-dashed border-gray-400"
+          >
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent?
+          </h3>
+          <ol class="list-decimal list-inside px-1 py-2">
+            <li>
+              innerHTML: Gets or sets HTML including descendants in an element.
+            </li>
+            <li>
+              innerText: Gets or sets the visible text content of an element, it
+              returns text that is actually rendered on the page.
+            </li>
+            <li>
+              textContent: Retrieves the complete text content, regardless of
+              rendering.
+            </li>
+          </ol>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg">
+          <h3
+            class="text-xl font-bold px-1 py-2 border-b border-dashed border-gray-400"
+          >
+            Question-3: What is event delegation in the DOM?
+          </h3>
+          <p class="px-1 py-2">
+            Event delegation is a technique to handle events from a parent for
+            all of its children, rather handling for each child individually. It
+            helps to handle events, even when some children are added later into
+            the parent.
+          </p>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg">
+          <h3
+            class="text-xl font-bold px-1 py-2 border-b border-dashed border-gray-400"
+          >
+            Question-4: What is event bubbling in the DOM?
+          </h3>
+          <p class="px-1 py-2">
+            Event bubbling describes how an event travel through the DOM tree. It
+            starts from the target element and travels to its parent, up to the root element.
+          </p>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg">
+          <h3
+            class="text-xl font-bold px-1 py-2 border-b border-dashed border-gray-400"
+          >
+            Question-5: How do you create, add, and remove elements using JavaScript?
+          </h3>
+          <ol class="list-decimal list-inside px-1 py-2">
+            <li>Create Elements: document.createElement(tagName)</li>
+            <li>Add Elements: parentElement.appendChild(childElement), parentElement.insertAdjacentHTML(position, newElement) </li>
+            <li>Remove Elements: parentElement.removeChild(childElement), parentElement.replaceChildren() (Removes All)</li>
+          </ol>
+        </div>
+      </div>
+    </main>
+    <script src="scripts/blogs-script.js"></script>
+  </body>
+</html>
